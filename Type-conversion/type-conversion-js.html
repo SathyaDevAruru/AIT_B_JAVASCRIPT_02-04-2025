@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type-conversion-JS</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // Numeric string
+        console.log('*****  Numeric string ****');
+        let number = '1234.77sfhjky34';
+        console.log(number);
+        console.log(typeof number);
+
+        // To convert numeric string into a number
+        // 1. Number method
+        console.log('***** Number  constructor ****');
+        let res = Number(number);
+        console.log(res);
+        console.log(typeof res);
+
+
+        // 2. Moder operator : 2020
+        console.log('***** Moder operator ****');
+        console.log(+number);
+        // console.log(typeof number);
+
+
+        // 3. parseInt()
+        console.log('***** parseInt() ****');
+        console.log(parseInt(number));
+        
+
+        // 3. parseFloat()
+        console.log('***** parseFloat() ****');
+        console.log(parseFloat(number));
+        
+        
+        
+         // To convert number into a string
+        console.log('********* To convert number into a string **************');
+        
+         let str = 1234;
+         console.log(str);
+         console.log(typeof str);
+         
+        //  1. String method
+        let strRes = String(str);
+        console.log(strRes);
+        console.log(typeof strRes);
+        
+
+        // 2. toString()
+        console.log(str.toString());
+
+
+
+        // Boolean conversion
+
+        // falsy values:
+        console.log('****** falsy values *******');
+        
+        console.log(Boolean(' '));
+        console.log(Boolean(0));
+        console.log(Boolean(null));
+        console.log(Boolean(undefined));
+        console.log(Boolean(NaN));
+        console.log(Boolean(-0));
+        console.log(Boolean(-1));
+        console.log(Boolean([]));
+        console.log(Boolean({}));
+
+        
+        
+
+        // Type coercion
+        console.log('******* Type coercion *********');
+        
+        console.log(1+2); // 3
+        console.log(1+'2'); // 12
+        console.log(2+3+'undefined'); // 
+        console.log(2+3+null); // 5
+        console.log(2+3+undefined+3);//
+        console.log(2-3);
+        console.log(2-4+'undefined');
+        
+        
+
+
+        
+        
+        
+        
+        
+         
+        
+    </script>
+</body>
+</html>

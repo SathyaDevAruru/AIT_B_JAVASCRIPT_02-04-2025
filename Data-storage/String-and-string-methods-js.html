@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String-and-Methods-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        // // String:- Group of characters.
+        // // Ways to create a string
+
+        // // 1. String literal way:
+        // let course = 'JavaScript';
+        // console.log(course);
+        // console.log(typeof course); // String datatype
+        // console.log(course.length); // 10 number based 
+
+        // // To extract all the char from a string - older way 
+        // console.log(`********** Extracting all the characters as per the index or position based a string using for loop*****`);
+
+        // console.log(course[0]);
+        // console.log(course[1]);
+        // console.log(course[2]);
+        // console.log(course[3]);
+        // console.log(course[4]);
+        // console.log(course[5]);
+        // console.log(course[6]);
+        // console.log(course[7]);
+        // console.log(course[8]);
+        // console.log(course[9]);
+        
+
+        // // Loop - For loop
+        // console.log(`********** Extracting all the characters from a string using for loop*****`);
+        
+        // for(let i = 0; i<course.length; i++){
+        //     console.log(course[i]);   
+        // }
+
+        
+        // // String constructor way:
+        // let mode = new String('Offline / Online ');
+        // console.log(mode);
+        // console.log(typeof mode);  // Object
+        
+        // // Example of to use single quotes inside the double quptes:
+        // let messageOne = 'Rajes said "JavaScript" is Best';
+        // console.log(messageOne);
+
+        //  // Example of to use double quotes inside the single quptes:
+        //  let messageTwo = "Rajesh said , It's 8 clock "
+        // console.log(messageTwo);
+
+
+        // // template literal / multiline string / Backticks
+        // let feedback = ` Amazon recognised as a top workplace in India by LinkedIn, again
+        //         The recognition highlights Amazon's commitment to career growth, upskilling opportunities, and internal mobility—key factors in LinkedIn's evaluation of India's most sought-after places to work.`
+        // console.log(feedback);
+
+
+        // // String interpolation:
+        // let name = 'Ujjwal';
+        // let role = 'UI developer';
+        // let status = 'Active';
+
+        // console.log(name+''+role+''+status); // Older way
+        // console.log(name,role,status); // Older way
+
+        // console.log(`My name is ${name}. and I'm a ${role} . I am alway ${status} in my office`);
+        
+        
+        
+        
+        
+
+        // Methods:
+
+        // String: literal way
+
+        let technology = 'UI Development';
+        console.log(technology);
+        console.log(technology.length); // 14
+        
+
+        // 1. indexOf()
+        console.log(technology.indexOf('e')); // 4
+
+        // 2. lastIndexOf()
+        console.log(technology.lastIndexOf('e')); // 11
+
+        // 3. charAt()
+        console.log(technology.charAt(0)); // U
+        console.log(technology.charAt(1)); // I
+        console.log(technology.charAt(2)); // D
+        console.log(technology.charAt(4)); // D
+
+
+         // 4. charCodeAt(): - ASCII table
+         console.log(technology.charCodeAt(1)); // t - 
+         
+        
+        // 5. substring();
+
+        console.log(technology.substring(3,14)); // UI Development
+        console.log(technology);
+
+
+        console.log(technology.toLowerCase());
+        console.log(technology.toUpperCase());
+
+        // Split 
+        console.log(technology.split());
+
+        console.log(technology.replace('UI','Front-End'));
+
+        // includes: 
+        console.log(technology.includes('y'));
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

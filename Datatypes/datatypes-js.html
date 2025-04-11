@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatypes-JS</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+    // Datatypes: - If you are storing any data to the variable. If you wanna know the what kind of data can be stored into the variable.
+
+
+    /*
+                Primitive datatypes:
+                    - string :- 
+                    - number :- 
+                    - boolean
+                    - undefined
+                    - null
+                    - sumbol
+                    - BigInt
+
+                Non-Primitive datatypes:
+                    - Array
+                    - Object
+                    - Array of an object
+                    - function
+                    - set
+                    - Map
+
+        
+    */ 
+
+    /* 
+    1. String: Group of characters 
+    
+    - To call a string
+        1. string literal way
+        2. string constructor way
+    
+    
+    */
+
+    // To create a string using literal way:
+
+    let name = 'Kiran';
+    console.log(name);
+    console.log(typeof name);
+
+    let a = ' ';
+    console.log(a);
+    
+
+
+    
+     // To create a string using constructor way:
+
+     let course = new String('UI Development');
+     console.log(course);
+     console.log(typeof course);
+
+
+    // To creat a number using literal way
+
+    let fee = 20000;
+    console.log(fee);
+    console.log(typeof fee);
+    
+     // To create a number using constructor way:
+
+     let discount_price = new Number(1000);
+     console.log(discount_price);
+     console.log(typeof discount_price);
+       
+    
+
+    // To creat a boolea using literal way
+
+    let isHeHere = true;
+    console.log(isHeHere);
+    console.log(typeof isHeHere);
+
+    // To create a boolean using constructor way:
+
+    let isHeEmployee = new Boolean(false);
+    console.log(isHeEmployee);
+    console.log(typeof isHeEmployee);
+    
+    
+    // undefined: 
+    let mode;
+    console.log(mode);
+    console.log(typeof mode);
+
+    // null: empty variable.
+
+    let table = null;
+    console.log(table);
+    console.log(typeof table);
+    
+
+    // Non-primitive datatypes
+
+    // Array declaration: [ pack of data ]
+
+    //  To creat an array using literal way
+
+    let studentDatails = ['Sanjay','BCA',28,98765432,'Sanjay@gmail.com','AP']
+    console.log(studentDatails);
+    console.log(typeof studentDatails);
+
+     //  To creat an array using constructor way
+     let studentDatialsMore = new Array('Active','Fullstack');
+     console.log(studentDatialsMore);
+     console.log(typeof studentDatialsMore);
+
+
+     //  To creat an Object using literal way
+
+     let employeeDetails = {
+        e_name: 'Ujjwal',
+        e_age : 28,
+        e_role: 'PFS Developer',
+        e_salary: 100000
+     }
+     console.log(employeeDetails);
+     console.log(typeof employeeDetails);
+     
+     
+    
+
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable-JS</title>
+</head>
+<body>
+    
+
+    <script>
+
+        /*
+        Variable: -this is the funcamental to all the programming language. It is used to store the data.
+
+
+        syntax of varaible:
+
+        variable keyword variable_name = anydata ;
+
+        - To declare a variable in JS there are three keywrods are there.  
+
+            1. var 
+            2. let 
+            3. const
+
+            - To play with JS kw.
+
+                a. variable declaration
+                b. variable assignment / initialization
+                c. varaible re-declartion
+                d. variable re-assignment.
+
+        
+        */
+
+
+        // Using var keyword to declare a variable
+
+        var course_name; // variable declaration
+            course_name = 'web developement'; // variable assignment
+
+        // To print the value
+        console.log(course_name)
+        
+        var course_name; // varaible re-declartio
+            course_name = 'JS course'; // variable re-assignment.
+
+
+
+         // Using let keyword to declare a variable
+
+         let duration = '3months';
+
+          duration = ' 3 months';
+          console.log(duration);
+
+        duration = '7 months';
+        console.log(duration);
+        console.log(typeof duration);
+
+
+        // Using const keyword to declare a variable;
+
+        const fee = 30000;
+        console.log(fee);
+        console.log(typeof fee);
+        
+        
+
+
+        /*************** 
+         Scopes - JS :  Scope refers to the current context of our code. This context determains where you can access the variable and functions.
+
+
+
+        Types of scopes:
+
+                1. Global scope:
+                2. Functiona / local scope:
+                3. Block scope:
+         
+         
+         
+         
+         
+         ************************/
+          
+        //  1. Global scope:
+
+        //  var a = 1;
+        //  let b = 2;
+        //  const c = 3;
+
+        //  console.log(a,b,c);
+
+
+        //  Funcion scope:
+
+        function print(){
+            var a = 1;
+            let b = 2;
+            const c = 3;
+
+            console.log(a,b,c);
+            
+        }
+        print()
+
+
+        // Block scope:
+
+        {
+            var m = 10;
+            let n = 20;
+            const l = 30;
+
+            console.log(m,n,l);
+            
+        }
+
+        console.log(l);
+        
+         
+
+    </script>
+</body>
+</html>
