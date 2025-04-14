@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-And-Array methods-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        // Variable declaration
+
+        // let v_name = 'Value' ;
+
+        // // Array : - A pack of Data. 
+        // // Literal way of creating a Array
+        // let studentDetails =['Naresh','React',23456,'offline','active','naresh@gmail.com',];
+        // console.log(studentDetails);
+        // console.log(studentDetails.length);
+        // console.log(typeof studentDetails); // Object 
+        
+        
+
+        // To get the a specific values from given an array
+        // console.log(studentDetails[0]);
+        // console.log(studentDetails[1]);
+        // console.log(studentDetails[2]);
+        // console.log(studentDetails[3]);
+        // console.log(studentDetails[4]);
+        // console.log(studentDetails[5]);
+
+        // For loop:
+        // console.log(`**** For loop *****`);
+        
+        // for(let i = 0; i<studentDetails.length; i++){
+        //     console.log(studentDetails[i]);
+            
+        // }
+        
+        
+
+        // 2. Constructor way of creating an array
+        // let person = new Array('Rajesh', 27);
+        // console.log(person);
+        // console.log(typeof person); // Object
+        
+
+       
+
+
+        // Array methods:
+
+        console.log(`******* Array methods *********`);
+        let name = ['Supriya', 'Ujjwal','Naresh', 'Ankit']
+        console.log(name);
+        
+
+        // To add one or more a new value or a new a name to my varaiable at last position
+        // 1. Push():
+        name.push('Tarun');
+        console.log(name);
+
+        //  To delete a value or a new a name to my varaiable at last position
+        // 2. pop ():
+        name.pop();
+        console.log(name);
+
+        //  To add a new value from the starting position from an array:
+        // 3. unshift():
+        // name.unshift('Rajesh');
+        // console.log(name);
+
+        //  To remove a new value from the starting position from an array:
+        // 4. Shift():
+        // name.shift();
+        // console.log(name);
+
+        // to add / remove a value at middle order from an array
+        // 5. Splice (from index, delete , new element)
+        name.splice(2,1,'Pallavi'); // ['Supriya', 'Ujjwal','Pallavi', 'Ankit']
+        console.log(name);
+
+
+        // 6. Slice :to extract a part of an array.
+        console.log(name.slice(1,4));
+        console.log(name);
+
+
+        // To convert an array into string 
+        // 7. join()
+        console.log(name.join(' '));
+
+
+        // To check an element is avaialabe or not
+        // 8. includes();
+        console.log(name.includes('Pallavi'));
+
+        // To add two arrays 
+        // Concat();
+
+        let num1 = [1,2,3,4];
+        let num2 = [5,6,7,8];
+        console.log(num1 , num2);
+        
+        let res = num1.concat(num2);
+        console.log(res);
+        
+        
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    </script>
+</body>
+</html>
