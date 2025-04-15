@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        // Object creation
+        // 1. literal way of creating an object
+        /*let person_details = {
+            name : 'Ujjwal',
+            age : 28,
+            email : 'ujjwal@gmail.com',
+            course : 'PFS',
+            mode : 'Offline'
+        }
+        console.log(person_details);*/
+        
+
+        // 2. Constructor way of creating an object
+
+        let training  = new Object();
+        console.log(training);
+
+        // To add a new property to my object
+        training.name = 'AIT';
+        training.location = 'BTM';
+        training.fee = 40000;
+
+        // To get the output
+        console.log(training);
+        
+         
+
+        // 3. Constructor function way to create an object
+
+
+
+
+
+        console.log(`  ********* Extracting  a specific property from an obj ********** `);
+        
+        let person_details = {
+            name : 'Ujjwal',
+            age : 28,
+            email : 'ujjwal@gmail.com',
+            course : 'PFS',
+            mode : 'Offline'
+        }
+        console.log(person_details);
+
+
+        // // To add a new proprty into my existing object
+        // person_details.email = 'ujjwal@gmail.com';
+        // console.log(person_details);
+
+        // // To modify the existing proprty from an object
+        // person_details.age = 30;
+        // console.log(person_details);
+
+
+
+        // To extract an existing property value from an object
+
+        // 1. Dot Notation: static 
+        console.log( person_details.course);
+
+        let res1 = person_details.course;
+        console.log(res1);
+
+
+        // 2. Bracket notation : dynamic
+        console.log(person_details['mode']);
+
+        let res2 = person_details['mode'];
+        console.log(res2);
+
+        let res3 = person_details['age'];
+        console.log(res3);
+        
+        
+        
+        
+        
+
+        // Object Methds
+        // To get  all the key from an object
+        let keysRes = Object.keys(person_details);
+        console.log(keysRes);
+        
+         // To get  all the values from an object
+         let valuesRes = Object.values(person_details);
+         console.log(valuesRes);
+
+        //  To check a property is availabe or not
+        console.log(person_details.hasOwnProperty('age')); // 
+        console.log(person_details.hasOwnProperty('id')); // 
+
+
+        let newObj = Object.entries(person_details);
+        console.log(newObj);
+        
+
+
+
+        let laptop = {
+            brandName :'Dell',
+            actualPrice : 20000
+        }
+        let mobile = {
+            brand : 'Apple',
+            price : 120000
+        }
+        // To add two objects
+        let obj = Object.assign(laptop,mobile);
+        console.log(obj);
+        
+
+    
+        Object.freeze() // not add & not modify 
+        Object.seal() // not add but which modifies
+        
+
+
+
+
+
+        let product = [
+
+            {
+                "userId": 1,
+                "id": 1,
+                "title": "quidem molestiae enim"
+            },
+            {
+                "userId": 1,
+                "id": 1,
+                "title": "quidem molestiae enim"
+            },
+            {
+                "userId": 1,
+                "id": 1,
+                "title": "quidem molestiae enim"
+            },
+        ]
+    </script>
+</body>
+</html>
