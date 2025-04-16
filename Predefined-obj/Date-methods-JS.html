@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Methods-JS</title>
+</head>
+<body>
+    
+    <script>
+
+
+        // Get day / date / month / year
+        let today = new Date();
+        // today.setFullYear(2024);
+        // console.log(today);
+        
+
+        // console.log(today);
+        // console.log(today.getDay());
+        // console.log(today.getMonth());
+        // console.log(today.getFullYear());
+        // console.log(today.getHours());
+        // console.log(today.getMinutes());
+        // console.log(today.getSeconds());
+        // console.log(today.getMilliseconds());
+
+        // set the date and months 
+
+        // today.setDate(25);
+        // today.setMonth(4);
+        // today.setFullYear(1994);
+        // today.setHours();
+
+        // console.log(today); // 25 4 1994
+        
+        
+        // DD-MM-YY / MM-YY-DD / 
+
+        // To set the dateformate
+        function getDateFormate(){
+            return(today.getDate()) +"/0"+ (today.getMonth() + 1) + "/" + today.getFullYear();
+        }
+        console.log(getDateFormate());
+        
+        
+    </script>
+</body>
+</html>
