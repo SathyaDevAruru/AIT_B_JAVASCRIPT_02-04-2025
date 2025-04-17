@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function-Declaration-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        // Function declaration
+        function sayHello(){
+            // Logic
+            alert('Welcome to JS functions')
+        }
+        // Calling a function
+        // sayHello();
+
+
+
+        // Types of functions
+        // 1. A function without parameters
+        function add(){
+            let addOne = 10;
+            let addTwo = 20;
+            let result = addOne+addTwo;
+            console.log(result); // 30 
+            
+        }
+        add();
+
+
+        // 2. A function with parameters
+
+        function addOne(a,b){
+            let res = a+b;
+            console.log(res);
+            
+        }
+        addOne(1,2)
+
+
+        // Example for With parameters
+
+        function admin(name,passwaord){
+            if((name == 'sanjay') && ( passwaord == '1234')){
+                alert('In this laptop user name is "Sanjay"');
+            }
+            else{
+                alert('In this laptop user name is not "Sanjay"');
+            }
+        }
+        admin('sanjay','31234');
+
+
+        // 3. Functin with default parameter
+
+        function totalFee(amount,discount=10){
+            let finalFee = amount-(amount*discount/100);
+            console.log(finalFee);
+            
+        }
+        totalFee(40000);
+
+
+
+        // return keyword / statement
+
+        function addition(a,b){
+            return a+b;
+            
+            let sum = 100;
+            console.log(sum);
+            
+
+        }
+       
+        console.log(addition(20,30));
+
+        // let resultOne = addition();
+        // console.log(resultOne);
+        
+        
+
+    </script>
+</body>
+</html>
