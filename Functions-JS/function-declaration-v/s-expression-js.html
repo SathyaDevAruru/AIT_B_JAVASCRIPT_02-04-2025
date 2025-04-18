@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function-Expression-JS</title>
+</head>
+<body>
+    
+    <script>
+        // Function declaration
+        // function message(){
+        //     document.write('Good morning to all...! <br/>');
+        // }
+        // message();
+
+        // Function expression
+        // Anonymous function
+        // Variable function
+    //    let fun_expre = function(){
+    //         document.write('We are learning function expression.');
+    //     }
+    //     fun_expre();
+
+
+
+    // Expression examples
+
+    /* let add = function(a,b){
+        let sum = a+b;
+        console.log(sum);
+        
+    }
+    add(1,2) */
+
+    let add = function(a,b){
+        let sum = a+b;
+        // console.log(sum);
+        return sum;
+        
+    }
+   console.log(add(1,2));
+
+
+    //  Arrow function
+
+    // let addition = (m,n) => {
+    //     let sum = m+n;
+    //     return sum;
+    // }
+    // console.log(addition(10,20));
+    
+    let addition = (m,n) => sum = m+n;
+    console.log(addition(10,20));
+    
+   
+
+    // Nested functions
+    // function parent(){
+    //     let message = 'Hello parent ';
+    //     console.log(message);
+    //     function child(){
+    //         let message = 'Hello children';
+    //         console.log(message);
+    //     }
+    //     child()
+    // }
+    // parent()
+
+
+
+    // Self invoking functions ( IIFExpression / IIFAnnotation )
+
+
+    /* 
+    
+    Syntax:
+
+    (function(){
+        // Code 
+    }) ()
+    */ 
+
+
+    // (function(){
+    //     alert('We are creating Self invoking function')
+    // }) ()
+
+
+    let product = {
+
+        brand :'Dell',
+        price : 12000,
+        features : 'More',
+        year : 2025,
+        moreInfo : () => {
+            console.log(`The ${product.brand} price is ${product.price} and it's features are ${product.features}. It was indtroduced in the year of ${product.year}`);
+            
+        }
+    }
+    product.moreInfo();
+    </script>
+</body>
+</html>
