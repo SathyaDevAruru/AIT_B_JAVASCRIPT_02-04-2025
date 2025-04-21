@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        ul li{
+            color: red;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- Container  -->
+     <ul>
+        <li>JS</li>
+        <li class="react">ReactJS</li>
+        <li id="angular">Angular</li>
+        <li class="react">NodeJS</li>
+        <li class="react">NextJS</li>
+     </ul>
+    <script>
+        //1. getElementsByTagName()
+        let htmlEle = document.getElementsByTagName('li')[4];
+        console.log(htmlEle);
+
+       //2. getElementsByClassName()
+        // let htmlEleClass = document.getElementsByClassName('react')[2];
+        // console.log(htmlEleClass);
+
+        // 3. getElementByIdName():
+        let htmlIdEle = document.getElementById('angular');
+        console.log(htmlIdEle);
+
+        // Generic selectors: 4. querySelector():
+        // let all = document.querySelector('.react')[3];
+        // console.log(all);
+        console.log(document.querySelector('.react')[3]);
+        
+        document.querySelector(); // HTML collection
+        document.querySelectorAll(); // Nodelist
+        
+        
+      
+        
+    </script>
+</body>
+</html>
