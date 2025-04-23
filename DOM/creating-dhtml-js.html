@@ -4,143 +4,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>DOM-Methods-JS</title>
     <style>
-        header,
-        ul {
+        section {
+            border: 1px solid red;
             display: flex;
         }
 
-        header div {
-            flex: 3;
-        }
-
-        header nav {
-            flex: 9;
-        }
-
-        ul li {
-            flex: 1;
-        }
-        section .card, img{
-            margin: 0px 2px;
+        section figure {
             border: 1px solid gray;
-            border-radius: 20px;
+            margin: 4px 3px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        figure img {
+            width: 100%;
+            border-radius: 10px;
         }
     </style>
 </head>
 
 <body>
-    <!-- <header>
-        <div>
-            <img src="https://yt3.googleusercontent.com/BE8oLlRJ4gzMqNyS5c0OnkuVsGH3tCWN6Zo5XjkR-BiPZObABCuQ-NDq-8sroOEMtX4kPv-9rg=s900-c-k-c0x00ffffff-no-rj"
-                alt="amz" width="100px">
-        </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="">item-1</a>
-                </li>
-                <li>
-                    <a href="">item-1</a>
-                </li>
-                <li>
-                    <a href="">item-1</a>
-                </li>
-                <li>
-                    <a href="">item-1</a>
-                </li>
-                <li>
-                    <a href="">item-1</a>
-                </li>
-                <li>
-                    <a href="">item-1</a>
-                </li>
-            </ul>
-        </nav>
-    </header> -->
-
-
-    <!-- Cards portion -->
-    <!-- <section class="d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-            <img src="https://www.achieversit.com/management/uploads/course_image/web-dev-img1.jpeg" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Web Development Course </h5>
-                <p class="card-text">Actual_price:40,000</p>
-                <p class="card-text">discount_price:36,000</p>
-                <a href="#" class="btn btn-primary">Click Here For More</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="https://www.achieversit.com/management/uploads/course_image/web-dev-img1.jpeg" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Web Development Course </h5>
-                <p class="card-text">Actual_price:40,000</p>
-                <p class="card-text">discount_price:36,000</p>
-                <a href="#" class="btn btn-primary">Click Here For More</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="https://www.achieversit.com/management/uploads/course_image/web-dev-img1.jpeg"  alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Web Development Course </h5>
-                <p class="card-text">Actual_price:40,000</p>
-                <p class="card-text">discount_price:36,000</p>
-                <a href="#" class="btn btn-primary">Click Here For More</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="https://www.achieversit.com/management/uploads/course_image/web-dev-img1.jpeg"  alt="..." >
-            <div class="card-body">
-                <h5 class="card-title">Web Development Course </h5>
-                <p class="card-text">Actual_price:40,000</p>
-                <p class="card-text">discount_price:36,000</p>
-                <a href="#" class="btn btn-primary">Click Here For More</a>
-            </div>
-        </div>
+    <!-- <section>
+        <figure>
+            <img src="https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif" alt="course-1">
+            <figcaption>Web Development</figcaption>
+            <figcaption>Mode:Online / offline </figcaption>
+            <figcaption>Actual_price:40,000</figcaption>
+            <figcaption>Discount_price:20,0000</figcaption>
+        </figure>
+        <figure>
+            <img src="https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif" alt="course-2">
+            <figcaption>Web Development</figcaption>
+            <figcaption>Mode:Online / offline </figcaption>
+            <figcaption>Actual_price:40,000</figcaption>
+            <figcaption>Discount_price:20,0000</figcaption>
+        </figure>
+        <figure>
+            <img src="https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif" alt="course-3">
+            <figcaption>Web Development</figcaption>
+            <figcaption>Mode:Online / offline </figcaption>
+            <figcaption>Actual_price:40,000</figcaption>
+            <figcaption>Discount_price:20,0000</figcaption>
+        </figure>
+        <figure>
+            <img src="https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif" alt="course-4">
+            <figcaption>Web Development</figcaption>
+            <figcaption>Mode:Online / offline </figcaption>
+            <figcaption>Actual_price:40,000</figcaption>
+            <figcaption>Discount_price:20,0000</figcaption>
+        </figure>
     </section> -->
-
-
-
-
+  
     <script>
-        // Sample Json dummy data
+
+        // sample data: Json
+
         let course_details = [
             {
-                imgUrl:'https://www.achieversit.com/management/uploads/course_image/web-dev-img1.jpeg',
-                courseName : 'Web Development Course',
-                course_totalPrice :'Actual_price:40,000',
-                course_discountPrice:'discount_price:36,000',
-                moreInf : 'Visit US'
+                imgUrl: 'https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif',
+                course_name: 'AI Full stack',
+                course_mode: 'Online / offline',
+                actual_price: 'Actual_price:40,000',
+                discount_price: 'Discount_price:20,0000'
             },
             {
-                imgUrl:'https://www.achieversit.com/management/uploads/course_image/web-dev-img1.jpeg',
-                courseName : 'Web Development Course',
-                course_totalPrice :'Actual_price:40,000',
-                course_discountPrice:'discount_price:36,000',
-                moreInf : 'Visit US'
+                imgUrl: 'https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif',
+                course_name: 'AI Full stack',
+                course_mode: 'Online / offline',
+                actual_price: 'Actual_price:40,000',
+                discount_price: 'Discount_price:20,0000'
             },
             {
-                imgUrl:'https://www.achieversit.com/management/uploads/course_image/web-dev-img1.jpeg',
-                courseName : 'Web Development Course',
-                course_totalPrice :'Actual_price:40,000',
-                course_discountPrice:'discount_price:36,000',
-                moreInf : 'Visit US'
+                imgUrl: 'https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif',
+                course_name: 'AI Full stack',
+                course_mode: 'Online / offline',
+                actual_price: 'Actual_price:40,000',
+                discount_price: 'Discount_price:20,0000'
             },
             {
-                imgUrl:'https://www.achieversit.com/management/uploads/course_image/web-dev-img1.jpeg',
-                courseName : 'Web Development Course',
-                course_totalPrice :'Actual_price:40,000',
-                course_discountPrice:'discount_price:36,000',
-                moreInf : 'Visit US'
+                imgUrl: 'https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif',
+                course_name: 'AI Full stack',
+                course_mode: 'Online / offline',
+                actual_price: 'Actual_price:40,000',
+                discount_price: 'Discount_price:20,0000'
             }
+
         ]
 
-        console.log(course_details);
+
+
+
+        // Using loop  
+        // let parentElement = '<section>'
+        // for(let i = 0; i < course_details.length; i++){
+        //     parentElement += '<figure>'
+        //         parentElement += '<img src="'+course_details[i].imgUrl+'">';
+        //         parentElement += '<figcaption>'+course_details[i]. course_name +'</figcaption>';
+        //         parentElement += '<figcaption>'+course_details[i]. course_mode +'</figcaption>';
+        //         parentElement += '<figcaption>'+course_details[i]. actual_price +'</figcaption>';
+        //         parentElement += '<figcaption>'+course_details[i]. discount_price +'</figcaption>';
+        //     parentElement += '</figure>'
+
+        // }
+        // parentElement += '</section>';
+
+
+        //  // To print the value of courseDetails:
+        //  document.write(parentElement);
+
+
+
+
+        // Approach -2 string interpolation
+
+     /*   let parentElement = '<section>';
+        for (let i = 0; i < course_details.length; i++) {
+            parentElement += ` <figure>
+
+                <img src = '${course_details[i].imgUrl}'>
+                <figcaption>${course_details[i].course_name}</figcaption>
+                 <figcaption>${course_details[i].course_mode}</figcaption>
+                  <figcaption>${course_details[i].actual_price}</figcaption>
+                   <figcaption>${course_details[i].discount_price}</figcaption>
+            </figure>
+            `
+
+        }
+        parentElement += '</section>';
+        document.write(parentElement); */
+
+
+        // DOM methods : Approach - 3 - DOM manipulation
+
+        let parentElement = document.createElement('section');
+        let figureElement = document.createElement('figure');
+        let imgElement = document.createElement('img');
+            // To add attribute in img tag
+            imgElement.setAttribute('src','https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif')
+            imgElement.setAttribute('alt','AI')
+
+        let figcaptionOne = document.createElement('figcaption');
+        let figcaptionOneText = document.createTextNode("course_name: 'AI Full stack'");
+        figcaptionOne.appendChild(figcaptionOneText);
+        let figcaptionTwo = document.createElement('figcaption')
+        let figcaptionThree = document.createElement('figcaption')
+        let figcaptionFour = document.createElement('figcaption')
+       
         
+
+        // To add all the children into figure
+        figureElement.appendChild(imgElement)
+        figureElement.appendChild(figcaptionOne)
+        figureElement.appendChild(figcaptionTwo)
+        figureElement.appendChild(figcaptionThree)
+        figureElement.appendChild(figcaptionFour)
+
+        // Need to add figure into section
+        parentElement.appendChild(figureElement);
+
+        // To get the all the elements in console
+        console.log(parentElement);
+   
+        
+
+
     </script>
 </body>
 
