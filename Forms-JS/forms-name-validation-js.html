@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name validation-JS</title>
+</head>
+<body>
+    <form action="" id="myForm">
+        <label for="name">Name</label> <br>
+        <input type="text" id="name" name="name"> <br>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="message"></p>
+
+
+    <script>
+
+        // Selecting an element
+        let form = document.getElementById('myForm');
+        let nameInput = document.getElementById('name');
+        let message = document.getElementById('message');
+
+        // Adding an event
+        form.addEventListener('submit',function(e){
+            e.preventDefault(); // stop the form from submitting
+
+            let nameValue = nameInput.value;
+
+            // Regular expression
+            let nameRegex = /^[a-zA-Z]{3,10}$/;
+
+            // Check if the entered name matches the required pattern.
+            if(nameRegex.test(nameValue)){
+                message.style.color = 'green';
+                message.textContent = 'Valid Name!';
+            }else{
+                message.style.color = 'red';
+                message.textContent = 'Please enter a valida name.. (only letters and spaces , 3-10 char)';
+            }
+
+        })
+
+    </script>
+</body>
+</html>

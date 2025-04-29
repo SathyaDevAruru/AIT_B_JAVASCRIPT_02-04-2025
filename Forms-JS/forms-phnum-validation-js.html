@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phnum validation-JS</title>
+</head>
+<body>
+    <form action="" id="phoneForm">
+        <label for="phone">Enter you Phone number:</label> <br>
+        <input type="text" id="phone" name="phone"> <br>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="phonemessage"></p>
+
+
+    <script>
+
+        // Selecting an element
+        let form = document.getElementById('phoneForm');
+        let phoneInput = document.getElementById('phone');
+        let phoneMessage = document.getElementById('phonemessage');
+
+        // Adding an event
+       form.addEventListener('submit',function(e){
+        e.preventDefault();
+
+
+        let phoneValue = phoneInput.value.trim();
+        // RegEx Pattern
+        let phoneRegex = /^[6-9]\d{9}$/;
+
+
+        if(phoneRegex.test(phoneValue)){
+            phoneMessage.style.color = 'green';
+            phoneMessage.textContent = 'Valid phone number';
+        }
+        else{
+            phoneMessage.style.color = 'red';
+            phoneMessage.textContent = 'Please enter a valid phone number'
+        }
+       })
+
+    </script>
+</body>
+</html>
