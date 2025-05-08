@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced-functions-JS</title>
+</head>
+<body>
+    <button id="button">Click here</button>
+    <script>
+        // First class functions:
+
+        // let x = 10;
+        // let print = function(){};
+
+        // Higher order function:
+
+        // def-1 :- Any function that receiceves another function as an argument 
+        // function add(a,b){
+        //     // Code 
+        // }
+        // add(2,function(){});
+
+        // Def : 2 - Function which returns a new function
+
+        // function addOne(){
+
+        //     return function(){};
+        // }
+        // addOne(3,5)
+
+
+
+        // Def - 3: Both 
+
+        // function addTwo(c,d){
+        //     return function(){};
+        // }
+        // addTwo(3, function(){});
+
+
+
+        // Example for HOF:
+
+        // const btn = document.querySelectorAll('button');
+        // btn.addEventListener('submit',function(){
+        //         alert('Buttton was clicked');
+        //     })
+
+        let btn = document.getElementById('button');
+        btn.addEventListener('click',function(){
+            alert('hello')
+            // console.log('Hello')
+        });
+     
+        
+        // Callback function: Function returns a new function
+
+        function count(){
+            let counter = 0;
+            return function(){
+                counter + 1;
+            }
+        }
+       console.log(count());
+       let res = count();
+       console.log(res);
+       
+    </script>
+</body>
+</html>

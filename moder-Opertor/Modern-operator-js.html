@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        //Destructuring: It allows us to extract multiple values from an array / object. 
+        
+        // Array creation:
+        let names = ['Naresh','Rajesh','Venkat','Ujjwal'];
+        console.log(names);
+
+        // To extract all the elements from an array- Older way
+        console.log(names[0]);
+        console.log(names[1]);
+        console.log(names[2]);
+        console.log(names[3]);
+        
+
+        // Modern JS - Destructuring
+
+        let [res1,res2,res3,res4] = names;
+        console.log(res1);
+        console.log(res2);
+        console.log(res3);
+        console.log(res4);
+        
+        console.log(res1,res2,res3,res4);
+        
+        console.log(names);
+        
+
+        // Ignore / skip an element from an array
+
+        let [re1,,,re4] = names;
+        console.log(re1,re4);
+
+
+        // nested arrays:
+
+        let [,[a,],[,[b,]]] = [1,[2,3],[4,[5,6]]] // 2,5
+        console.log(a,b);
+        
+        
+        
+        // Default values:
+
+        let [c] = [10,20];
+        console.log(c);
+
+
+
+        // Spread Operator:
+
+        // Example for Spread operator: -Array
+        let arraOne = [1,2,3,4,5]
+        let arraTwo = [...arraOne,6,7,8,9,10] // 6,7,8,9,10,1,2,3,4,5
+        console.log(arraTwo);
+
+
+        // spread with an object:
+
+        let obj1 = {
+            a : 1,
+            b : 2
+        }
+
+        let obj2 = {
+            
+           c : 3,
+           ...obj1
+        }
+        console.log(obj2);
+        
+
+        
+        /* Rest parameter: rest parameter collects multiple values into one array. Used in function parameters to accepts an unlimited numbeer of arguments. ...
+        
+        Note:
+
+            - It must be in the last parameter in hte function definition.
+            - It must be in the last parameter in the destructure.
+
+            ## In a function -> It is called rest parameter
+            ## In a destructure -> It is called rest element
+        
+        */
+
+        
+        // Example for rest parameter :- Function with named parameter:
+
+        function personDetails(name,age,role,...others){
+            console.log(name);
+            console.log(age);
+            console.log(role);
+            console.log(others);
+            
+            
+        }
+        personDetails('Tarun',28,'react','MCA','BTM','AP')
+
+
+        // Exampl for using destructuring with Rest parameter:
+
+        let employeeDetails = ['Sathya','Angular','Sathya@gmsil.com','.Net'];
+
+        let [name,role,mail,...others] = employeeDetails;
+        console.log(name,role,mail,others);
+        
+    </script>
+</body>
+</html>

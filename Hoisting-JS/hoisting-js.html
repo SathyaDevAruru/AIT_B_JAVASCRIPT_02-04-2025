@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        // Variable declaration - var keyword
+
+        // Var keyword if you are declaring a variable name on top the v.declaration which can scane first and made it undefined. but not let and const keuwords.
+
+        console.log(greet);
+        var greet = 'Hello to all..!';
+        console.log(greet);
+
+
+
+        // Variable declaration - let keyword can not be hoisted.
+
+        // console.log(sayHello);
+        // let sayHello = 'I am greeting you.';
+        // console.log(sayHello); // 
+        
+
+         // Variable declaration - const keyword can not be hoisted.
+
+        //  console.log(name);
+        //  const name = 'Ujjwal';
+        //  console.log(name);
+
+
+
+        //  Function declaration with hoisting
+
+        // - Function declaration is scanned first and made it available.
+        welcome();
+        function welcome(){
+            console.log('welcome to all...!');
+        }
+        welcome();
+
+
+
+        // Function expression -
+
+        hoist() /* 
+        - let & const - ReferenceError: Cannot access 'hoist' before initialization.
+        - var - TypeError: hoist is not a function
+         */
+        var hoist = function(){
+            console.log('we are learning function expression hoisting..');
+            
+        }
+        hoist();
+        
+
+        //  TDZ - hoisting
+    </script>
+</body>
+</html>

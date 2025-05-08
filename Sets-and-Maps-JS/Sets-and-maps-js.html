@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set-and-Maps-JS</title>
+</head>
+<body>
+    
+    <script>
+        
+
+        /*
+        
+        
+        Set: - It is collection fo items which are unique. 
+        - To create a set using Constructor way 
+         syntax: 
+
+         Kw v_n = new Set([]);
+
+        Methods:
+
+            - add()
+            - delete()
+            - has()
+            - clear()
+        */
+
+        // Array creation
+        let packOfDate = ['Sathya','Rajesh','Naresh','Sathya','Rajesh','Naresh']; // 6
+        console.log(packOfDate);
+        console.log(packOfDate.length);
+
+        // Set - Constructor way 
+        let newSet = new Set([1,2,3,4,5,1,2,3,4,5]) // 10
+        console.log(newSet);
+        console.log(newSet.size);
+
+        // To add new value into  my set
+        newSet.add(6);
+        console.log(newSet);
+
+        // to check the value is availabe or not in my set
+        console.log(newSet.has(10));
+
+        // To delete a value from a set
+        newSet.delete(4);
+        console.log(newSet);
+
+        // To clear entire set 
+        // newSet.clear();
+        // console.log(newSet);
+        
+        
+        // Map - 
+
+        let newMap = new Map();
+
+        newMap.set('name','Yaswanth');
+        newMap.set('age',27);
+        newMap.set('POY',2022);
+        newMap.set('degree','b-tech');
+        console.log(newMap);
+
+
+        
+        
+        
+        
+        
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced-Methods-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        // Array declaration:
+
+        let names = ['Venkat','tarun','Rajesh'];
+        console.log(names); // 
+        console.log(`******* Normal extracting **********`);
+        console.log(`good morning to ${names[0]}` );
+        console.log(`good morning to ${names[1]}` );
+        console.log(`good morning to ${names[2]}` );
+        
+        
+
+
+        // Advanced array methods:
+        // 1. forEach(): 
+        
+        /* 
+         Syntax:
+
+         c_a_n.forEach(function(){
+            // Code 
+
+         })
+        
+        */ 
+
+
+        // Example for forEach():
+
+        console.log(`******* ForEach method extracting **********`);
+        names.forEach((name) =>{
+            console.log(`Good Morning to ${name}`);
+            
+        })
+
+
+        //  Map ():-
+
+        /*
+        Syntax:
+
+        c_a_n.map(function(c_e, index, array){
+        
+            // Code;
+        
+        })
+        
+        */ 
+
+        let nums = [1,2,3,4,5,6];
+        let mapRes = nums.map((numOne) =>{
+            return numOne * 2 ;
+
+        }) 
+        
+        console.log((mapRes));
+        // 2,4,6,8,10,12
+        console.log(nums);
+        
+
+        // Example for map mehthod:
+
+        let employeeDetails = [
+            {
+                name :' Kavya',
+                role : 'PFS',
+                salry : 2000
+
+            },
+            {
+                name :' Kavya',
+                role : 'PFS',
+                salry : 2000
+ 
+            },
+            {
+                name :' Kavya',
+                role : 'PFS',
+                salry : 2000
+
+            }
+        ]
+
+
+        const employeeName = employeeDetails.map((employee) =>{
+            return ` ${employee.name}, ${employee.role}, ${employee.salry}`
+        })
+
+            console.log(employeeName);
+
+            const number = [1,2,3,4,5];
+            const total = number.reduce((accu , num)=>{
+                return accu + num;
+            })
+            console.log(total);
+            
+            
+    </script>
+</body>
+</html>

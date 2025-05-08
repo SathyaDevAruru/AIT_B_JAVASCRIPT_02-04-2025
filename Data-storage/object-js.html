@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Object-JS</title>
 </head>
+
 <body>
-    
+
     <script>
 
         // Object creation
+        
         // 1. literal way of creating an object
         /*let person_details = {
             name : 'Ujjwal',
@@ -19,11 +22,11 @@
             mode : 'Offline'
         }
         console.log(person_details);*/
-        
+
 
         // 2. Constructor way of creating an object
 
-        let training  = new Object();
+        let training = new Object();
         console.log(training);
 
         // To add a new property to my object
@@ -33,23 +36,51 @@
 
         // To get the output
         console.log(training);
-        
-         
+
+
 
         // 3. Constructor function way to create an object
 
+        /*
+         Function construnctor:
 
+         - A Function Constructor is a special type of function used to create multiple objects with the same structure and behavior.
+        
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+              
+        */
+
+        ////////////////////////////////////////
+
+        /*
+        Example for fuction constructor:
+
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.greet = function () {
+            console.log("Hi, my name is " + this.name);
+            };
+        }
+
+        let person3 = new Person("Sathya baby", 29);
+        person3.greet(); // Hi, my name is Sathya baby
+
+        */
 
 
 
         console.log(`  ********* Extracting  a specific property from an obj ********** `);
-        
+
         let person_details = {
-            name : 'Ujjwal',
-            age : 28,
-            email : 'ujjwal@gmail.com',
-            course : 'PFS',
-            mode : 'Offline'
+            name: 'Ujjwal',
+            age: 28,
+            email: 'ujjwal@gmail.com',
+            course: 'PFS',
+            mode: 'Offline'
         }
         console.log(person_details);
 
@@ -67,7 +98,7 @@
         // To extract an existing property value from an object
 
         // 1. Dot Notation: static 
-        console.log( person_details.course);
+        console.log(person_details.course);
 
         let res1 = person_details.course;
         console.log(res1);
@@ -81,49 +112,49 @@
 
         let res3 = person_details['age'];
         console.log(res3);
-        
-        
-        
-        
-        
+
+
+
+
+
 
         // Object Methds
         // To get  all the key from an object
         let keysRes = Object.keys(person_details);
         console.log(keysRes);
-        
-         // To get  all the values from an object
-         let valuesRes = Object.values(person_details);
-         console.log(valuesRes);
+
+        // To get  all the values from an object
+        let valuesRes = Object.values(person_details);
+        console.log(valuesRes);
 
         //  To check a property is availabe or not
         console.log(person_details.hasOwnProperty('age')); // 
         console.log(person_details.hasOwnProperty('id')); // 
 
-
+        // entries:- static method returns an array of a given object's 
         let newObj = Object.entries(person_details);
         console.log(newObj);
-        
+
 
 
 
         let laptop = {
-            brandName :'Dell',
-            actualPrice : 20000
+            brandName: 'Dell',
+            actualPrice: 20000
         }
         let mobile = {
-            brand : 'Apple',
-            price : 120000
+            brand: 'Apple',
+            price: 120000
         }
         // To add two objects
-        let obj = Object.assign(laptop,mobile);
+        let obj = Object.assign(laptop, mobile);
         console.log(obj);
-        
 
-    
+
+
         Object.freeze() // not add & not modify 
         Object.seal() // not add but which modifies
-        
+
 
 
 
@@ -149,4 +180,5 @@
         ]
     </script>
 </body>
+
 </html>

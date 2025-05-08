@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function-Methods-JS</title>
+</head>
+
+<body>
+    <script>
+
+        // let product = {
+        //     brand: 'Dell',
+        //     price: 12000,
+        //     features: 'More',
+        //     year: 2025,
+        //     moreInfo: () => {
+        //         console.log(`The ${this.brand} price is ${this.price} and it's features are ${this.features}. It was indtroduced in the year of ${this.year}`);
+        //     }
+        // }
+        // product.moreInfo();
+
+
+        // let productOne = {
+        //     brand: 'HP',
+        //     price: 19000,
+        //     features: 'More',
+        //     year: 2022,
+        //     moreInfo: () => {
+        //         console.log(`The ${this.brand} price is ${this.price} and it's features are ${this.features}. It was indtroduced in the year of ${this.year}`);
+        //     }
+        // }
+        // productOne.moreInfo();
+
+
+
+        // Function Methods:
+        // 1. call() , 2. apply() , 3. bind().
+
+        // Sample data of object
+
+        let productOne = {
+            product_name : 'Dell',
+            product_price : 12000
+        }
+
+        let productTwo = {
+            product_name : 'HP',
+            product_price : 19000
+        }
+
+        let productThree = {
+            product_name : 'lenovo',
+            product_price : 11000
+        }
+
+        // Create a method:
+
+      let prinInfo = function(month,year){
+            console.log(`The product name is ${this.product_name} it's price is ${this.product_price} and the product month is ${month} and year is ${year}`);
+            
+        }
+
+        // console.log(prinInfo());
+
+        // Call():
+        prinInfo.call(productOne, 'june',1990);
+        prinInfo.call(productTwo, 'may' , 2023);
+        prinInfo.call(productThree);
+
+
+        // Apply 
+        prinInfo.apply(productOne,['July',2020]);
+
+        let arrRes = ['july',2020];
+        prinInfo.apply(productOne,arrRes)
+
+
+        // Bind():
+
+        let bindRes = prinInfo.bind(productTwo, 'Feb', 2012);
+        bindRes();
+
+    </script>
+</body>
+
+</html>

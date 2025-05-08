@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This-Keyword-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        // This keyword : It reffers to the current object.
+
+        // Example for method: older way 
+
+        let personDetails = {
+            name : 'Mahesh',
+            role : 'Manager',
+            salary : 50000,
+            moreInfo : function(){
+                console.log(`My name is ${personDetails.name} my role is ${personDetails.role} and my salary is ${personDetails.salary}`);
+                
+            }
+        }
+        personDetails.moreInfo();
+        
+
+         // Example for this keyword in method: newer way 
+
+         let employeeDetail = {
+            name : 'Ujjwal',
+            age : 28,
+            role : 'MERN stack',
+            moreDetails : function(){
+                console.log(`My name is ${this.name} my age is ${this.age} and my role is ${this.role}`);
+                
+            }
+         }
+         employeeDetail.moreDetails();
+    </script>
+</body>
+</html>

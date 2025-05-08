@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 20px;
+            font-size: 30px;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="startTimeout()">setTimeout()</button>
+    <button onclick="startInterval()">setInterval()</button>
+    <button onclick="stopInterval()">stopInterval()</button>
+
+    <div id="output"></div>
+    <script>
+        /*
+        setTimeout(): It is used to call a function after a certian perioed of time 
+        
+        Syntax:
+        setTimeout(function(){
+            // Code to be executed
+        }, tim in milli seconds);
+
+
+
+        - setInterval() - 
+        */
+
+        // setTimeout(function(){
+        //     alert('Hello')
+        // },3000)
+
+
+
+        // Example for timers
+        let intervalId;
+        
+        function startTimeout(){
+            setTimeout(function(){
+                document.getElementById('output').innerHTML += " timeout : Our button has been triggered after 2 sec"
+            },2000)  
+        }
+
+        function startInterval(){
+            intervalId = setInterval(function(){
+                document.getElementById('output').innerHTML += 'Interval : Repeating every 1 second'
+            },1000)
+        }
+
+
+        function stopInterval(){
+            clearInterval(intervalId);
+            document.getElementById('output').innerHTML += 'Interval has stopped.'
+        }
+        let message = 'Hello';
+        document.write(message)
+    </script>
+</body>
+</html>
